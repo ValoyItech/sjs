@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Skosana Attorneys Inc | Legal Excellence in East London</title>
+    <!-- Meta Description -->
+<meta name="description" content="SJ Skosana Attorneys Inc offers expert legal services in East London. We specialize in criminal and civil litigation, family law, property law, RAF claims, labour matters, and more.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="SJ Skosana Attorneys, East London lawyers, legal services, criminal law, civil litigation, family law, RAF claims, property law, South Africa attorneys">
+
+<!-- Author -->
+<meta name="author" content="SJ Skosana Attorneys Inc">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.co.za/">
+<meta property="og:title" content="SJ Skosana Attorneys Inc | Legal Services in East London">
+<meta property="og:description" content="Reliable and professional legal services in East London. Contact SJ Skosana Attorneys today.">
+<meta property="og:image" content="images/logo.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://yourwebsite.co.za/">
+<meta name="twitter:title" content="SJ Skosana Attorneys Inc | Legal Services in East London">
+<meta name="twitter:description" content="Professional legal services in East London – criminal, civil, family law, and more.">
+<meta name="twitter:image" content="images/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary-black: #000000;
+            --primary-white: #FFFFFF;
+            --primary-gold: #FFD700;
+            --primary-silver: #C0C0C0;
+            --primary-orange: #FF8C00;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .logo-circle {
+            background-color: var(--primary-black);
+            border: 3px solid var(--primary-orange);
+        }
+        
+        .logo-text {
+            color: var(--primary-white);
+        }
+        
+        .logo-attorneys {
+            color: var(--primary-silver);
+        }
+        
+        .logo-arch {
+            border-color: var(--primary-white);
+        }
+        
+        .logo-columns {
+            background-color: var(--primary-gold);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        .fade-in {
+  opacity: 1 !important; /* temporary */
+}
+
+        /* Custom styles to prevent horizontal scroll */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Prevent horizontal scroll on mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .md:w-1/2 {
+                width: 100%;
+            }
+            
+            .md:flex-row {
+                flex-direction: column;
+            }
+            
+            .md:grid-cols-2, .md:grid-cols-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .md:pr-10 {
+                padding-right: 0;
+            }
+            
+            .md:absolute {
+                position: relative;
+            }
+            
+            .desktop-menu {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .text-center {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+  <img src="images/logo.png" alt="SJ Skosana Logo" class="w-12 h-12 object-contain" />
+  <span class="text-xl font-bold">
+    SJ SKOSANA <span class="text-gray-300">ATTORNEYS INC</span>
+  </span>
+</div>
+
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 desktop-menu">
+
+                <a href="#home" class="hover:text-orange-400 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-orange-400 transition duration-300">About</a>
+                <a href="#services" class="hover:text-orange-400 transition duration-300">Services</a>
+                <a href="#contact" class="hover:text-orange-400 transition duration-300">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-6 mobile-menu">
+            <a href="#home" class="block py-2 hover:text-orange-400 transition duration-300">Home</a>
+            <a href="#about" class="block py-2 hover:text-orange-400 transition duration-300">About</a>
+            <a href="#services" class="block py-2 hover:text-orange-400 transition duration-300">Services</a>
+            <a href="#contact" class="block py-2 hover:text-orange-400 transition duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" style="font-family: 'Playfair Display', serif;">
+                    <span class="block">Expert Legal</span>
+                    <span class="text-orange-400">Representation</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 fade-in">Providing exceptional legal services with integrity, professionalism and dedication to our clients in East London and beyond.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                        Contact Us
+                    </a>
+                    <a href="#services" class="bg-transparent hover:bg-white hover:text-black text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black" style="font-family: 'Playfair Display', serif;">
+                        About <span class="text-orange-500">SJ Skosana Attorneys</span>
+                    </h2>
+                    <p class="text-gray-700 mb-4">SJ Skosana Attorneys Inc is a dynamic and progressive law firm based in East London, South Africa. We are committed to providing our clients with professional, efficient and cost-effective legal services.</p>
+                    <p class="text-gray-700 mb-6">Our firm was established with the vision of delivering exceptional legal representation while maintaining the highest standards of integrity and professionalism. We pride ourselves on our personalized approach to each client's unique legal needs.</p>
+                    <div class="bg-orange-100 border-l-4 border-orange-500 p-4 mb-6">
+                        <p class="text-orange-700 font-medium">"Justice is the constant and perpetual will to allot to every man his due." - Domitus Ulpian</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative fade-in">
+                    <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl">
+                        <img src="images/sjs2.jpg" alt="Law Office" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-lg shadow-lg hidden md:block floating">
+                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-sm">Years of Combined Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+<section id="services" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black" style="font-family: 'Playfair Display', serif;">
+        Our <span class="text-orange-500">Legal Services</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive legal solutions tailored to meet your specific needs. Our expertise spans across various areas of law.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/criminal.jpg" alt="Criminal Law" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">Criminal & Civil Litigation</h3>
+          <p class="text-gray-600">Representation in both criminal and civil matters, ensuring your rights are protected throughout the legal process.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/service1.jpg" alt="Labour Matters" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">Labour Matters</h3>
+          <p class="text-gray-600">Expert advice and representation in employment disputes, unfair dismissals, and workplace discrimination cases.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/raf.jpg" alt="RAF Claims" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">RAF Claims</h3>
+          <p class="text-gray-600">Assistance with Road Accident Fund claims to ensure you receive fair compensation for injuries sustained in motor vehicle accidents.</p>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/property.jpg" alt="Property Law" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">Property Law</h3>
+          <p class="text-gray-600">Comprehensive legal services for property transactions, transfers, disputes and all matters related to real estate.</p>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/contract.jpg" alt="Contracts" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">Drafting of Contracts</h3>
+          <p class="text-gray-600">Preparation and review of legally binding agreements to protect your interests in business and personal transactions.</p>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-500 fade-in">
+        <img src="images/family.jpg" alt="Family Law" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 text-orange-500">Family Law</h3>
+          <p class="text-gray-600">Sensitive handling of divorce, maintenance, custody and all family-related legal matters with compassion and expertise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black" style="font-family: 'Playfair Display', serif;">
+        Why <span class="text-orange-500">Choose Us</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Discover what sets SJ Skosana Attorneys apart from other law firms in East London.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center fade-in">
+      <div class="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <i class="fas fa-user-shield text-orange-500 text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Trusted Legal Experts</h3>
+        <p class="text-gray-600">Our team brings years of legal experience with a reputation for trust, skill, and integrity.</p>
+      </div>
+
+      <div class="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <i class="fas fa-balance-scale text-orange-500 text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Client-Centered Approach</h3>
+        <p class="text-gray-600">We take time to understand each client's needs and provide tailored legal solutions.</p>
+      </div>
+
+      <div class="p-8 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+        <i class="fas fa-handshake text-orange-500 text-4xl mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Affordable & Transparent</h3>
+        <p class="text-gray-600">We offer competitive rates and clear communication with no hidden fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="team" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black" style="font-family: 'Playfair Display', serif;">
+        Our <span class="text-orange-500">Legal Team</span>
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Meet our dedicated attorney committed to delivering exceptional legal services.</p>
+      <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+    </div>
+
+    <div class="flex justify-center">
+  <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+    <div style="height: 280px;">
+      <img src="images/him.jpg" alt="Sipho Skosana" class="w-full h-full object-cover">
+    </div>
+    <div class="p-8">
+      <h3 class="text-xl font-bold text-black mb-1" style="font-family: 'Playfair Display', serif;">Sipho Skosana</h3>
+      <p class="text-orange-500 font-medium mb-4">Director</p>
+      <p class="text-gray-600 mb-6">A seasoned legal expert with a sharp focus on civil and criminal litigation, dedicated to protecting client rights with integrity and professionalism.</p>
+      <div class="flex items-center space-x-4">
+        <a href="mailto:siphos@sjskosanaattorneys.co.za" class="text-sm text-black font-medium hover:underline">
+          <i class="fas fa-envelope mr-1"></i> Email Sipho Skosana
+        </a>
+        <a href="https://www.linkedin.com/in/sipho-skosana-6082a698/?originalSubdomain=za" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 font-medium hover:underline flex items-center">
+          <i class="fab fa-linkedin mr-1"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black" style="font-family: 'Playfair Display', serif;">
+                    Contact <span class="text-orange-500">Us</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Get in touch with our team for professional legal advice and representation.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 fade-in">
+                    <div class="bg-gray-100 rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-black">Send us a message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="service" class="block text-gray-700 mb-2">Service Required</label>
+                                <select id="service" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                    <option value="">Select a service</option>
+                                    <option value="criminal">Criminal & Civil Litigation</option>
+                                    <option value="labour">Labour Matters</option>
+                                    <option value="raf">RAF Claims</option>
+                                    <option value="family">Family Law</option>
+                                    <option value="property">Property Law</option>
+                                    <option value="commercial">Commercial Law</option>
+                                    <option value="contracts">Drafting of Contracts</option>
+                                    <option value="estates">Administration of Estates</option>
+                                    <option value="wills">Drafting of Wills</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 fade-in">
+                    <div class="bg-orange-500 text-white rounded-lg p-8 shadow-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-black p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Address</h4>
+                                    <p>261 Oxford Street, Southernwood, East London, 5201</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-black p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone Numbers</h4>
+                                    <p class="mb-1">072 928 5008</p>
+                                    <p>061 509 7478</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-black p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email Addresses</h4>
+                                    <p class="mb-1">siphos@sjskosanaattorneys.co.za</p>
+                                    <p>skosana.attorneys@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-black p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Working Hours</h4>
+                                    <p class="mb-1">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                    <p>Saturday: By appointment only</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=100076309984983" class="bg-black hover:bg-gray-800 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-black hover:bg-gray-800 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-black hover:bg-gray-800 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.7592171796227!2d27.868912876654527!3d-32.98850981558786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e66e1c2fbe0503d%3A0xe64085a63067ddaf!2sSJ%20Skosana%20Attorneys%20Inc!5e1!3m2!1sen!2sza!4v1751453409429!5m2!1sen!2sza" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+               <div class="mb-8 md:mb-0">
+  <div class="flex items-center space-x-2 mb-4">
+    <img src="images/logo.png" alt="SJ Skosana Attorneys Logo" class="w-10 h-10 object-contain">
+    <span class="text-lg font-bold text-white">
+      SJ SKOSANA <span class="text-gray-300">ATTORNEYS INC</span>
+    </span>
+  </div>
+  <p class="text-gray-400 max-w-xs">
+    Providing exceptional legal services with integrity and professionalism in East London and beyond.
+  </p>
+</div>
+
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-orange-400">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-orange-400 transition duration-300">Home</a></li>
+                            <li><a href="#about" class="hover:text-orange-400 transition duration-300">About Us</a></li>
+                            <li><a href="#services" class="hover:text-orange-400 transition duration-300">Services</a></li>
+                            <li><a href="#contact" class="hover:text-orange-400 transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-orange-400">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-orange-400 transition duration-300">Criminal Law</a></li>
+                            <li><a href="#" class="hover:text-orange-400 transition duration-300">Family Law</a></li>
+                            <li><a href="#" class="hover:text-orange-400 transition duration-300">Property Law</a></li>
+                            <li><a href="#" class="hover:text-orange-400 transition duration-300">RAF Claims</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 text-orange-400">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt mr-2 mt-1 text-sm"></i>
+                                <div>
+                                    <p>072 928 5008</p>
+                                    <p>061 509 7478</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mr-2 mt-1 text-sm"></i>
+                                <div>
+                                    <p>siphos@sjskosanaattorneys.co.za</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 SJ Skosana Attorneys Inc. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/profile.php?id=100076309984983" class="text-gray-400 hover:text-orange-400 transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/27729285008" class="text-gray-400 hover:text-orange-400 transition duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/skosana_ka_dludlu/" class="text-gray-400 hover:text-orange-400 transition duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sipho-skosana-6082a698/?originalSubdomain=za" class="text-gray-400 hover:text-orange-400 transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-orange-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+        
+        // GSAP animations
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from(".logo-circle", {
+                duration: 1.5,
+                rotation: 360,
+                opacity: 0,
+                ease: "back.out(1.7)"
+            });
+            
+            gsap.from("nav a", {
+                duration: 1,
+                y: -50,
+                opacity: 0,
+                stagger: 0.1,
+                delay: 0.5
+            });
+            
+            gsap.from(".service-card", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                delay: 0.3
+            });
+        });
+    </script>
+</body>
+</html>
