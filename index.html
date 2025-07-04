@@ -952,6 +952,32 @@ gsap.from("#team .shadow-lg", {
 });
 
 
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent actual form submission
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
+
+  // Basic validation
+  if (!name || !email || !phone || !service) {
+    alert('Please fill in all required fields (Name, Email, Phone, Service).');
+    return;
+  }
+
+  const whatsappNumber = '27729285008'; // Your WhatsApp number with country code (South Africa = 27)
+  
+  // Format message
+  const whatsappMessage = `Hello, my name is ${name}.\nEmail: ${email}\nPhone: ${phone}\nService Required: ${service}\nMessage: ${message}`;
+
+  // Encode message for URL
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+
+  // Open WhatsApp chat in new tab
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+});
 
 
 
