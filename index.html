@@ -236,20 +236,45 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-<section id="home" class="hero-section text-white py-20 md:py-32 relative overflow-hidden">
+    <!-- Hero Section Slideshow -->
+<section id="home" class="hero-section text-white relative overflow-hidden min-h-screen">
+  <!-- Slides Wrapper -->
+  <div id="heroSlides" class="absolute inset-0 w-full h-full">
+    <!-- Slide 1 -->
+    <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 z-10">
+      <!-- Desktop -->
+      <div class="hidden md:block absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero1-desktop.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      <!-- Mobile -->
+      <div class="block md:hidden absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero1-mobile.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+    </div>
 
-  <!-- Desktop background -->
-  <div class="hidden md:block absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero.jpg');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <!-- Slide 2 -->
+    <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-0">
+      <div class="hidden md:block absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero2-desktop.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      <div class="block md:hidden absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero2-mobile.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-0">
+      <div class="hidden md:block absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero3-desktop.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      <div class="block md:hidden absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero3-mobile.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+    </div>
   </div>
 
-  <!-- Mobile background -->
-  <div class="block md:hidden absolute inset-0 bg-cover bg-center" style="background-image: url('images/D128740481TG009.jpg');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-  </div>
-
-  <div class="container mx-auto px-6 relative z-10">
+  <!-- Content -->
+  <div class="container mx-auto px-6 relative z-20 min-h-screen flex items-center justify-center">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" style="font-family: 'Playfair Display', serif;">
         <span class="block">Expert Legal</span>
@@ -269,37 +294,10 @@
     </div>
   </div>
 
-  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent"></div>
+  <!-- Fade to next section -->
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent z-30"></div>
 </section>
 
-
-    <!-- About Section -->
-    <section id="about" class="about-section py-20 bg-white">
-
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black" style="font-family: 'Playfair Display', serif;">
-                        About <span class="text-orange-500">SJ Skosana Attorneys</span>
-                    </h2>
-                    <p class="text-gray-700 mb-4">SJ Skosana Attorneys Inc is a dynamic and progressive law firm based in East London, South Africa. We are committed to providing our clients with professional, efficient and cost-effective legal services.</p>
-                    <p class="text-gray-700 mb-6">Our firm was established with the vision of delivering exceptional legal representation while maintaining the highest standards of integrity and professionalism. We pride ourselves on our personalized approach to each client's unique legal needs.</p>
-                    <div class="bg-orange-100 border-l-4 border-orange-500 p-4 mb-6">
-                        <p class="text-orange-700 font-medium">"Justice is the constant and perpetual will to allot to every man his due." - Domitus Ulpian</p>
-                    </div>
-                </div>
-                <div class="md:w-1/2 relative fade-in">
-                    <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl">
-                        <img src="images/sjs2.jpg" alt="Law Office" class="w-full h-auto">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-lg shadow-lg hidden md:block floating">
-                        <div class="text-4xl font-bold mb-2">15+</div>
-                        <div class="text-sm">Years of Combined Experience</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Section -->
 <section id="services" class="services-section py-20 bg-gray-100">
@@ -415,28 +413,56 @@
       <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
     </div>
 
-    <div class="flex justify-center">
-  <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
-    <div style="width: 100%; max-width: 100%; overflow: hidden;">
-  <img src="images/D128740481TG009.jpg" alt="Sipho Skosana"
-       style="width: 100%; height: auto; display: block; object-fit: contain;">
-</div>
+    <div class="flex flex-wrap justify-center gap-8">
 
-    <div class="p-8">
-      <h3 class="text-xl font-bold text-black mb-1" style="font-family: 'Playfair Display', serif;">Mr SJ Skosana</h3>
-      <p class="text-orange-500 font-medium mb-4">Director</p>
-      <p class="text-gray-600 mb-6">A seasoned legal expert with a sharp focus on civil and criminal litigation, dedicated to protecting client rights with integrity and professionalism.</p>
-      <div class="flex items-center space-x-4">
-        <a href="mailto:siphos@sjskosanaattorneys.co.za" class="text-sm text-black font-medium hover:underline">
-          <i class="fas fa-envelope mr-1"></i> Email Mr SJ Skosana
-        </a>
-        <a href="https://www.linkedin.com/in/sipho-skosana-6082a698/?originalSubdomain=za" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 font-medium hover:underline flex items-center">
-          <i class="fab fa-linkedin mr-1"></i> LinkedIn
-        </a>
+      <!-- Mr SJ Skosana -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+        <div style="width: 100%; max-width: 100%; overflow: hidden;">
+          <img src="images/D128740481TG009.jpg" alt="Sipho Skosana"
+            style="width: 100%; height: auto; display: block; object-fit: contain;">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-black mb-1" style="font-family: 'Playfair Display', serif;">Mr SJ Skosana</h3>
+          <p class="text-orange-500 font-medium mb-4">Director</p>
+          <p class="text-gray-600 mb-6">A seasoned legal expert with a sharp focus on civil and criminal litigation, dedicated to protecting client rights with integrity and professionalism.</p>
+          <div class="flex items-center space-x-4">
+            <a href="mailto:siphos@sjskosanaattorneys.co.za" class="text-sm text-black font-medium hover:underline">
+              <i class="fas fa-envelope mr-1"></i> Email Mr SJ Skosana
+            </a>
+            <a href="https://www.linkedin.com/in/sipho-skosana-6082a698/?originalSubdomain=za" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 font-medium hover:underline flex items-center">
+              <i class="fab fa-linkedin mr-1"></i> LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
+
+      <!-- Asemahle Kabanyane -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+        <div style="width: 100%; max-width: 100%; overflow: hidden;">
+          <img src="images/Asemahle.jpg" alt="Asemahle Kabanyane"
+            style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-black mb-1" style="font-family: 'Playfair Display', serif;">Asemahle Kabanyane</h3>
+          <p class="text-orange-500 font-medium mb-4">LLB Student - Intern</p>
+          <p class="text-gray-600 mb-6">A committed intern currently pursuing her LLB degree, assisting in case preparation and legal research with enthusiasm and dedication.</p>
+        </div>
+      </div>
+
+      <!-- Siphokuhle Nyamanda -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm">
+        <div style="width: 100%; max-width: 100%; overflow: hidden;">
+          <img src="images/Siphokuhle.jpg" alt="Siphokuhle Nyamanda"
+            style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold text-black mb-1" style="font-family: 'Playfair Display', serif;">Siphokuhle Nyamanda</h3>
+          <p class="text-orange-500 font-medium mb-4">Candidate Attorney</p>
+          <p class="text-gray-600 mb-6">A dynamic candidate attorney focused on building strong client relations and delivering legal solutions with diligence and passion.</p>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
   </div>
 </section>
 
@@ -898,6 +924,27 @@ gsap.from("#team .shadow-lg", {
 
 
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+
+    setInterval(() => {
+      // Hide current
+      slides[current].classList.remove('opacity-100', 'z-10');
+      slides[current].classList.add('opacity-0', 'z-0');
+
+      // Move to next
+      current = (current + 1) % slides.length;
+
+      // Show next
+      slides[current].classList.remove('opacity-0', 'z-0');
+      slides[current].classList.add('opacity-100', 'z-10');
+    }, 6000); // 6 seconds per slide
+  });
+</script>
+
 
 </body>
 </html>
