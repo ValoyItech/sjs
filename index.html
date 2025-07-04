@@ -183,6 +183,16 @@
   }
 }
 
+.hero-section .bg-cover {
+  transition: transform 10s ease;
+  transform: scale(1);
+}
+
+.hero-section .bg-cover.visible {
+  transform: scale(1.05);
+}
+
+
     </style>
 </head>
 <body class="bg-gray-100">
@@ -227,30 +237,45 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg text-white py-20 md:py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" style="font-family: 'Playfair Display', serif;">
-                    <span class="block">Expert Legal</span>
-                    <span class="text-orange-400">Representation</span>
-                </h1>
-                <p class="text-lg md:text-xl mb-8 fade-in">Providing exceptional legal services with integrity, professionalism and dedication to our clients in East London and beyond.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
-                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
-                        Contact Us
-                    </a>
-                    <a href="#services" class="bg-transparent hover:bg-white hover:text-black text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">
-                        Our Services
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent"></div>
-    </section>
+<section id="home" class="hero-section text-white py-20 md:py-32 relative overflow-hidden">
+
+  <!-- Desktop background -->
+  <div class="hidden md:block absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+
+  <!-- Mobile background -->
+  <div class="block md:hidden absolute inset-0 bg-cover bg-center" style="background-image: url('images/D128740481TG009.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in" style="font-family: 'Playfair Display', serif;">
+        <span class="block">Expert Legal</span>
+        <span class="text-orange-400">Representation</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-8 fade-in">
+        Providing exceptional legal services with integrity, professionalism and dedication to our clients in East London and beyond.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in">
+        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+          Contact Us
+        </a>
+        <a href="#services" class="bg-transparent hover:bg-white hover:text-black text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">
+          Our Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent"></div>
+</section>
+
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="about-section py-20 bg-white">
+
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in">
@@ -277,7 +302,8 @@
     </section>
 
     <!-- Services Section -->
-<section id="services" class="py-20 bg-gray-100">
+<section id="services" class="services-section py-20 bg-gray-100">
+
   <div class="container mx-auto px-6">
     <div class="text-center mb-16 fade-in">
       <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black" style="font-family: 'Playfair Display', serif;">
@@ -653,71 +679,225 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Back to top button
-        const backToTopBtn = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.remove('opacity-0', 'invisible');
-                backToTopBtn.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopBtn.classList.remove('opacity-100', 'visible');
-                backToTopBtn.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Scroll animations
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        fadeElements.forEach(element => {
-            fadeInObserver.observe(element);
-        });
-        
-        // GSAP animations
-        document.addEventListener('DOMContentLoaded', () => {
-            gsap.from(".logo-circle", {
-                duration: 1.5,
-                rotation: 360,
-                opacity: 0,
-                ease: "back.out(1.7)"
-            });
-            
-            
-            
-            gsap.from(".service-card", {
-                duration: 1,
-                y: 50,
-                opacity: 0,
-                stagger: 0.2,
-                delay: 0.3
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+
+    <!-- ScrollTrigger plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible');
+        backToTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopBtn.classList.remove('opacity-100', 'visible');
+        backToTopBtn.classList.add('opacity-0', 'invisible');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Fade-in observer
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const fadeInObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(element => fadeInObserver.observe(element));
+
+    // Logo animation
+    gsap.from(".logo-circle", {
+      duration: 1.5,
+      rotation: 360,
+      opacity: 0,
+      ease: "back.out(1.7)"
+    });
+
+    // Service card animation
+    gsap.from(".service-card", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    // Hero background fade & zoom
+    gsap.from(".hero-section .bg-cover", {
+      opacity: 0,
+      scale: 1.1,
+      duration: 2,
+      ease: "power2.out"
+    });
+
+    // Hero content animation
+    gsap.from(".hero-section h1", {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      delay: 0.5,
+      ease: "power3.out"
+    });
+    gsap.from(".hero-section p", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      delay: 0.8,
+      ease: "power2.out"
+    });
+    gsap.from(".hero-section .flex", {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 1,
+      ease: "power2.out"
+    });
+
+    // Optional zoom-in effect on hero background
+    document.querySelectorAll('.hero-section .bg-cover').forEach(bg => {
+      setTimeout(() => {
+        bg.classList.add('visible');
+      }, 100);
+    });
+
+    // About section animation
+    gsap.from(".about-section h2", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".about-section p", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      delay: 0.3,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".about-section img", {
+      opacity: 0,
+      x: 50,
+      duration: 1,
+      delay: 0.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".about-section .floating", {
+      opacity: 0,
+      y: 40,
+      delay: 0.8,
+      duration: 1,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: ".about-section",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  // Animate Services heading and description
+gsap.from(".services-section h2, .services-section p", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".services-section",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  }
+});
+
+// Animate each service card
+gsap.from(".services-section .service-card", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  stagger: 0.2,
+  delay: 0.3,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".services-section",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+// Animate Legal Team heading and description
+gsap.from("#team h2, #team p, #team .w-20", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "#team",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  }
+});
+
+// Animate Legal Team card
+gsap.from("#team .shadow-lg", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  delay: 0.4,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#team",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+
+
+
+
+</script>
+
 </body>
 </html>
